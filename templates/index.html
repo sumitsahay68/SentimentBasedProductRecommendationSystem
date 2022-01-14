@@ -1,0 +1,18 @@
+<!doctype html>
+<title>:: SBPRS ::</title>
+<link rel=stylesheet type=text/css href="../static/style.css">
+<div class=page>
+  <h1 style="text-align:center">:: Sentiment Based Product Recommendation System ::</h1>
+  <h5 style="text-align:center">Developed by: Sumit Sahay</h5>
+
+  <form action="{{url_for('recommendProducts')}}" method="post">
+    <label for="username">Enter Username</label><br>
+    <input type="text" id="username" name="username" placeholder="Enter username"><br>
+    <input type="submit" value="Get Product Recommendations">
+  </form> 
+  <!-- {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %} -->
+  {{result}}
+</div>

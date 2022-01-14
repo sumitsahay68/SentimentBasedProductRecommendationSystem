@@ -39,9 +39,10 @@ def sentimentBasedProductRecommendations(username):
                                  .sort_values(ascending=False)[:20])
     except KeyError:
         # If user doesn't exist print the error message
-        print("ERROR: Unable to recommend products to username '{}', as it doesn't not exist in the system!".format(username))
-        print("Please try again with another user that already exists in the system.")
-        return
+        errorMessage = "ERROR: Unable to recommend products to username '{}', as it doesn't not exist in the system!\n\
+            Please try again with another user that already exists in the system.".format(username)
+        
+        return errorMessage
     
     # Creating a Dictionary to store the percentage of positive sentiments
     recommendationsPositivePercentage = {}
