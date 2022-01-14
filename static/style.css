@@ -1,12 +1,30 @@
-body            { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+body            { 
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+    background-color: cyan;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 a, h1, h2       { color: #377ba8; }
 h1, h2          { margin: 0; }
 h1              { border-bottom: 2px solid #eee; }
 h2              { font-size: 1.2em; }
+h5              { color: green;}
+
+.button {
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+
 
 table.dataframe, .dataframe th, .dataframe td {
   border: none;
-  border-bottom: 0.5px solid #C8C8C8;
+  border-bottom: 0.5px solid #d4ba4e;
   border-collapse: collapse;
   text-align:center;
   padding: 12px;
@@ -14,17 +32,25 @@ table.dataframe, .dataframe th, .dataframe td {
   font-size: 0.9em;
 }
 
-.gender th {
-    background-color: cornflowerblue;
-    color: black;
+table {
+    border: none;
+    border-bottom: 0.5px solid #d4ba4e;
+    border-collapse: collapse;
+    text-align:center;
+    padding: 12px;
+    margin-bottom: 40px;
+    font-size: 0.9em;
+    background-color: darkcyan;
+    color: gray;
+    text-align: center;
 }
 
-.age th {
-    background-color: darkcyan;
-    color: beige;
+
+td {
+    background-color: lavender;
 }
 
 tr:nth-child(odd)		{ background-color:#eee; }
 tr:nth-child(even)	{ background-color:#fff; }
 
-tr:hover            { background-color: #ffff99;}
+tr:hover            { background-color: grey;}

@@ -1,18 +1,23 @@
 <!doctype html>
 <title>:: SBPRS ::</title>
 <link rel=stylesheet type=text/css href="../static/style.css">
-<div class=page>
-  <h1 style="text-align:center">:: Sentiment Based Product Recommendation System ::</h1>
-  <h5 style="text-align:center">Developed by: Sumit Sahay</h5>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<body>
+<div class="main" style="text-align: center;">
+  <h1 style="text-align:center;">:: Sentiment Based Product Recommendation System ::</h1>
+  <h5 style="text-align:center;">&lt;Developed by: Sumit Sahay&gt;</h5>
 
   <form action="{{url_for('recommendProducts')}}" method="post">
     <label for="username">Enter Username</label><br>
-    <input type="text" id="username" name="username" placeholder="Enter username"><br>
-    <input type="submit" value="Get Product Recommendations">
+    <input type="text" id="username" name="username" placeholder="Enter Username" style="width: 20%;"><br>
+    <input type="submit" value="Get Product Recommendations" style="border-radius: 5px; width: 15%;">
   </form> 
-  <!-- {% for table in tables %}
-    <h2>{{titles[loop.index]}}</h2>
+  <!-- Displaying the Recommendations -->
+  {% for table in productsTable %}
+    <h4>{{titles[loop.index]}}</h4>
+    <span style="align-self: center;">
     {{ table|safe }}
-  {% endfor %} -->
-  {{result}}
+   </span>
+  {% endfor %}  
 </div>
+</body>

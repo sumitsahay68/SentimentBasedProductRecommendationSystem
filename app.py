@@ -19,15 +19,21 @@ def home():
 
 @app.route('/recommend-products', methods=['POST'])
 def recommendProducts():
+    # Fetching the user entered username 
     username =  str(request.form.get('username'))
+
+    # Getting recommendations for user using the model
     recommendations = model.sentimentBasedProductRecommendations(username)
+    # Converting recommendations list to a dataFrame
     recommendations = pd.DataFrame(recommendations, columns=['Product Recommendations'])
-    # tables=[recommendations.to_html(classes='Product Recommendations')], titles = ['NAN', 'Product Recommendations']
-    return  render_template('index.html', result=recommendations)
 
+    # Creating a HTML table using DataFrame
+    recommendations_table = [recommendations.to_html(classes='recommendations')]
+    # Defining Table title
+    table_title = ['NAN', 'Top 5 Product Recommendations for : {}'.format(username)]
 
-
-
+    # Rendering Template while passing the results
+    return  render_template('index.html', productsTable = recommendations_table, titles=table_title)
 
 
 
