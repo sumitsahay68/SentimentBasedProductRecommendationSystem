@@ -1,0 +1,18 @@
+<!doctype html>
+<title>:: SBPRS - All Usernames ::</title>
+<link rel=stylesheet type=text/css href="../static/style.css">
+<body>
+  <div class="main">
+    <h1 style="text-align:center;">All Usernames</h1>
+    <h5 style="text-align:center;"><a href="{{url_for('home')}}">Return to Home</a></h3>
+    <!-- Displaying the Usernames -->
+    <br>
+    <div class="result">
+      {% for table in usernameTable %}
+        <h4>{{titles[loop.index]}}</h4>
+        {{ table|safe }}  
+      {% endfor %}
+    </div>
+
+  </div>
+</body>

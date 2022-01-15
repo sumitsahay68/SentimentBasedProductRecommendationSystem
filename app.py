@@ -29,7 +29,7 @@ def recommendProducts():
     if type(modelOutput) != list : 
         # Returning the error to be displayed
         return render_template('index.html', error=modelOutput)
-        
+
     # If output is a list then:
     # Converting recommendations list to a dataFrame
     recommendations = pd.DataFrame(modelOutput, columns=['Product Recommendations'])
@@ -42,6 +42,21 @@ def recommendProducts():
     # Rendering Template while passing the results
     return  render_template('index.html', productsTable = recommendations_table, titles=table_title)
 
+@app.route('/allusernames', methods=['GET'])
+def allUsernames():
+    # Reading usernames from source i.e. recommendation system
+    usernamesList = list(model.ProductRecommendationSystem.index)
+
+    # Converting List to a dataframe
+    usernamesDF = pd.DataFrame(usernamesList, columns=['Available Usernames'])
+
+    # Creating a HTML table using DataFrame
+    usernameTable = [usernamesDF.to_html(classes='usernames')]
+    # Defining Table title
+    table_title = ['NAN', 'List of all usernames available in SBPRS Database']
+
+    # Rendering the page
+    return render_template('allusernames.html', usernameTable = usernameTable, titles = table_title )
 
 
 # Starting Flask Application
