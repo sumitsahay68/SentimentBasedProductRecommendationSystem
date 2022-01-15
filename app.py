@@ -1,3 +1,5 @@
+# AUTHOR: Sumit Sahay
+# Importing required libraries
 from flask import Flask, render_template, request, redirect, url_for
 import warnings
 import pandas as pd
@@ -61,10 +63,4 @@ def allUsernames():
 
 # Starting Flask Application
 if __name__ == '__main__' :
-    app.run(debug=True )
-
-
-
-
-
-
+    app.run()
