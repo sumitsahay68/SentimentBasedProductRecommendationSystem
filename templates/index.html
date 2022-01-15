@@ -4,15 +4,18 @@
 <body>
   <div class="header">
     <h1 style="text-align:center;">:: Sentiment Based Product Recommendation System ::</h1>
-    <h5 style="text-align:center;">&lt;Developed by: Sumit Sahay&gt;</h5>
+    <h4 style="text-align:center;">&lt;Developed by: Sumit Sahay&gt;</h4>
+    <span style="text-align: center;"><a href="https://www.linkedin.com/in/sumit-sahay/" target="_blank">LinkedIn</a>&nbsp;|&nbsp;<a href="https://github.com/sumitsahay68/SentimentBasedProductRecommendationSystem" target="_blank">Project GitHub Repo</a> </span>
   </div>
 
   <br>
   <div class="main">
     <form action="{{url_for('recommendProducts')}}" method="post">
-      <label for="username">Enter Username</label><br><br>
-      <input type="text" class="textbox" name="username" placeholder="Enter Username"><br>
+      <label for="username">Enter Username</label><br>
+      <input type="text" class="textbox" name="username" placeholder="Enter Username"><br><br><br>
       <input type="submit" class="submitbutton" value="Recommend Products">
+      <br>
+      <a href="allusernames.html">Available Users</a>
     </form> 
     <!-- Displaying the Recommendations -->
     <br>

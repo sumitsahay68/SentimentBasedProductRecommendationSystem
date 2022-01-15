@@ -40,7 +40,7 @@ def sentimentBasedProductRecommendations(username):
     except KeyError:
         # If user doesn't exist print the error message
         errorMessage = "ERROR: Unable to recommend products to username '{}', as it doesn't not exist in the system!\n\
-            Please try again with another user that already exists in the system.".format(username)
+            Please try again with a user from 'Available Users' list provided above. ".format(username)
         
         return errorMessage
     
