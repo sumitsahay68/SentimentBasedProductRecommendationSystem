@@ -1,6 +1,6 @@
 body            { 
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
-    background-color: white; 
+    background : url('https://raw.githubusercontent.com/sumitsahay68/SentimentBasedProductRecommendationSystem/master/images/shopping.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,15 +8,57 @@ body            {
 }
 a, h1, h2       { color: #377ba8; }
 h1, h2          { margin: 0; }
-h1              { border-bottom: 2px solid #eee; }
+/* h1              { border-bottom: 2px solid #eee; } */
 h2              { font-size: 1.2em; }
-h5              { color: green;}
+h5              { color: rgb(21, 197, 21);}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+
 
 .main {
-  background-color: rgb(240, 235, 235);
-  width: 60%;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 50%;
+  border-radius: 8px;
+  border-width: 5px;
+  border-color: rgb(219, 23, 23);
   text-align: center;
+  margin-left: 24%;
+  padding: 5px;
 }
+
+input[type=text]{
+  width: 300px;
+  height: 25px;
+  border: 1px solid grey;
+}
+
+input[type=submit] {
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  font-size: inherit;
+  font-weight: 200;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: darkorange;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(255, 188, 107);
+}
+
+
+.result {
+  justify-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 
 .button {
     transition-duration: 0.4s;
@@ -56,7 +98,22 @@ td {
     background-color: whitesmoke;
 }
 
-tr:nth-child(odd)		{ background-color:white; }
-tr:nth-child(even)	{ background-color:beige; }
+td:hover {
+  background-color: rgb(101, 230, 16);
+}
 
-tr:hover            { background-color: rgb(101, 230, 16);}
+th {
+  size: 28px;
+  background-color: yellow;
+}
+
+tr:nth-child(odd)		{ background-color:cyan; }
+tr:nth-child(even)	{ background-color:beige;}
+
+.error {
+  color: red;
+  font-weight:500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* tr:hover            { background-color: rgb(101, 230, 16);} */
