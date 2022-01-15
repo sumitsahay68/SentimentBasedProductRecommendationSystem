@@ -23,9 +23,16 @@ def recommendProducts():
     username =  str(request.form.get('username'))
 
     # Getting recommendations for user using the model
-    recommendations = model.sentimentBasedProductRecommendations(username)
+    modelOutput = model.sentimentBasedProductRecommendations(username)
+
+    # Checking type of variable if it's not a list then it will be an error
+    if type(modelOutput) != list : 
+        # Returning the error to be displayed
+        return render_template('index.html', error=modelOutput)
+        
+    # If output is a list then:
     # Converting recommendations list to a dataFrame
-    recommendations = pd.DataFrame(recommendations, columns=['Product Recommendations'])
+    recommendations = pd.DataFrame(modelOutput, columns=['Product Recommendations'])
 
     # Creating a HTML table using DataFrame
     recommendations_table = [recommendations.to_html(classes='recommendations')]
