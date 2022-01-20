@@ -7,7 +7,7 @@
     <h5 style="text-align:center;"><a href="{{url_for('home')}}">Return to Home</a></h3>
     <!-- Displaying the Usernames -->
     <br>
-    <div class="result">
+    <div class="userlist">
       {% for table in usernameTable %}
         <h4>{{titles[loop.index]}}</h4>
         {{ table|safe }}  
